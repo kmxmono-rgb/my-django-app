@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for config project.
 
@@ -25,7 +27,7 @@ SECRET_KEY = "django-insecure-$ovj-@d^p=fs_@_ml6)7)_4&xj8bjf*+^oe1dedhu2!q0ot*g8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
